@@ -5,7 +5,12 @@
  */
 package codexamen;
 
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import twitter4j.Status;
 import twitter4j.Twitter;
+import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
@@ -31,5 +36,32 @@ public class MetodosTwitter {
         twitter = new TwitterFactory(cb.build()).getInstance();
     }
     
-    
+    /**
+     * Metodo q nos da nuestro timeLine
+     */
+    public void timeLine() {
+        try {
+
+            List<Status> statuses = twitter.getHomeTimeline();
+            System.out.println("Showing home timeline.");
+            for (Status status : statuses) {
+                System.out.println(status.getUser().getName() + ":"
+                        + status.getText());
+            }
+        } catch (TwitterException ex) {
+            Logger.getLogger(MetodosTwitter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
