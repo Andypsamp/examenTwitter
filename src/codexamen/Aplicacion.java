@@ -12,8 +12,8 @@ public class Aplicacion {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-  MetodosTwitter twit = new MetodosTwitter();
+
+        MetodosTwitter twit = new MetodosTwitter();
         int op;
         do {
             op = Integer.parseInt(JOptionPane.showInputDialog("opciones: \n1 --> TimeLine\n2 --> Buscar\n3 --> Tweettear\n4 --> Exit"));
