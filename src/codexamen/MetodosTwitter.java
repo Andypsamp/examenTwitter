@@ -22,10 +22,10 @@ import twitter4j.conf.ConfigurationBuilder;
  * @author ANDY PEÑA SAMPEDRO
  */
 public class MetodosTwitter {
-      ConfigurationBuilder cb = new ConfigurationBuilder();
+
+    ConfigurationBuilder cb = new ConfigurationBuilder();
     Twitter twitter;
-    
-    
+
     /**
      * Constructor, da acceso a nuestra cuenta en twitter.
      */
@@ -38,7 +38,7 @@ public class MetodosTwitter {
                 .setOAuthAccessTokenSecret("x");
         twitter = new TwitterFactory(cb.build()).getInstance();
     }
-    
+
     /**
      * Metodo q nos da nuestro timeLine
      */
@@ -55,7 +55,8 @@ public class MetodosTwitter {
             Logger.getLogger(MetodosTwitter.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
- /**
+
+    /**
      * Busca tweets con el string introducido
      */
     public void buscar() {
@@ -73,7 +74,7 @@ public class MetodosTwitter {
         }
     }
 
-/**
+    /**
      * Crea y publica un tweet
      */
     public void tweet() {
@@ -86,13 +87,5 @@ public class MetodosTwitter {
             Logger.getLogger(MetodosTwitter.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-
-
-
-
-
-
-
 
 }
