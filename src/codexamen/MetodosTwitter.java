@@ -31,12 +31,8 @@ public class MetodosTwitter {
      */
     public MetodosTwitter() {
 
-        cb.setDebugEnabled(true)
-                .setOAuthConsumerKey("x")
-                .setOAuthConsumerSecret("x")
-                .setOAuthAccessToken("x")
-                .setOAuthAccessTokenSecret("x");
-        twitter = new TwitterFactory(cb.build()).getInstance();
+        twitter = new TwitterFactory("twitter4j.properties").getInstance();
+
     }
 
     /**
