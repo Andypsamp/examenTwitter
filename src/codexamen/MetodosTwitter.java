@@ -5,10 +5,17 @@
  */
 package codexamen;
 
+import twitter4j.Twitter;
+import twitter4j.conf.ConfigurationBuilder;
+
 /**
  *
  * @author ANDY PEÑA SAMPEDRO
  */
 public class MetodosTwitter {
+      ConfigurationBuilder cb = new ConfigurationBuilder();
+    Twitter twitter;
+    
+    
     
 }
